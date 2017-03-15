@@ -1,0 +1,84 @@
+//Soal Polinomial
+
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+
+int main()
+{  int poli1[10]; int poli2[10]; int poli3[10];
+  //p1
+  int i1;     int p=0;
+  int maxP1;
+  cout<<"      ARITMATIKA POLINOMIAL   \n\n";
+  cout<<" Masukkan Batas Polinomial  Persamaan 1 : " ; cin>>maxP1;
+  for(i1=0 ; i1<=maxP1-1 ; i1++)
+  {cout<< " Masukkn Nilai Koefisien Polinomial X^"<<p<< " : " ;
+  cin>>poli1[i1]; p++; }
+  cout<<" Jadi P1 : ";
+  for(i1=maxP1-1 ; i1>=0 ; i1--)
+  {p--; cout<<" + ("<<poli1[i1]<<"X^"<<p<<")"; }
+  for(;maxP1<=10; maxP1++)
+  { poli1[maxP1]=0;}
+
+//p2
+  int i2 ; p=0;
+  do {
+  cout<<"\n\n Masukkan Batas Polinomial  Persamaan 2 : " ; cin>>maxP1;  }while(maxP1>9);
+  for(i2=0 ; i2<=maxP1-1 ; i2++)
+  {cout<< " Masukkn Nilai Koefisien Polinomial X^"<<p<< " : " ;
+  cin>>poli2[i2]; p++;}
+  cout<<" Jadi P2 : ";
+  for(i2=maxP1-1 ; i2>=0 ; i2--)
+  {p--; cout<<" + ("<<poli2[i2]<<"X^"<<p<<")"; }
+  for(; maxP1<=9; maxP1++ )
+  {    poli2[maxP1]=0; }
+
+//p3
+  int i3; p=0;
+  do {
+  cout<<"\n\n Masukkan Batas Polinomial  Persamaan 3 : " ; cin>>maxP1;   }while(maxP1>9);
+  for(i3=0 ; i3<=maxP1-1 ; i3++)
+  {cout<< " Masukkn Nilai Koefisien Polinomial X^"<<p<< " : " ;
+  cin>>poli3[i3]; p++;}
+  cout<<" Jadi P3 : ";
+  for(i3=maxP1-1 ; i3>=0 ; i3--)
+  {p--; cout<<" + ("<<poli3[i3]<<"X^"<<p<<")"; }
+   for(;maxP1<=9; maxP1++)
+  { poli3[maxP1]=0;}
+
+  cout<<"\n\n==============================================";
+  cout<< "\n Hasil EMPAT OPERASI ARITMATIKA DASAR : ";
+  cout<<"\n================================================";
+  cout<<"\n\n Penambahan : \n";
+  cout<<" P1 + P2  = "<<poli1[10]<<"x^10 + "<<poli1[9]+poli2[9]<<"x^9 + "
+ <<poli1[8]+poli2[8]<<"x^8 +"<<poli1[7]+poli2[7]<<"x^7 + "
+ <<poli1[6]+poli2[6]<<"x^6 +"<<poli1[5]+poli2[5]<<"x^5 + "
+ <<poli1[4]+poli2[4]<<"x^4 + "<<poli1[3]+poli2[3]<<"x^3 +\n"
+ <<poli1[2]+poli2[2]<<"x^2 + "<<poli1[1]+poli2[1]<<"x^1 + "
+ <<poli1[0]+poli2[0]<<"x^0 ";
+
+  cout<<"\n\n Pengurangan : \n";
+  cout<<" P1 - P2  = "<<poli1[10]<<"x^10 + "<<poli1[9]-poli2[9]<<"x^9 + "
+ <<poli1[8]-poli2[8]<<"x^8 + "<<poli1[7]-poli2[7]<<"x^7 + "
+ <<poli1[6]-poli2[6]<<"x^6 + "<<poli1[5]-poli2[5]<<"x^5 + "
+ <<poli1[4]-poli2[4]<<"x^4 + "<<poli1[3]-poli2[3]<<"x^3 +\n"
+ <<poli1[2]-poli2[2]<<"x^2 + "<<poli1[1]-poli2[1]<<"x^1 + "
+ <<poli1[0]-poli2[0]<<"x^0 ";
+
+  cout<<"\n\n Perkalian : \n";
+  cout<<" P1 * P3  = "<<poli1[10]*poli3[10]<<"x^11 + "<<poli1[9]*poli3[9]<<"x^10+ "
+ <<poli1[8]*poli3[8]<<"x^9 + "<<poli1[7]*poli3[7]<<"x^8 + "
+ <<poli1[6]*poli3[6]<<"x^7 + "<<poli1[5]*poli3[5]<<"x^6 + "
+ <<poli1[4]*poli3[4]<<"x^5 + "<<poli1[3]*poli3[3]<<"x^4 +\n"
+ <<poli1[2]*poli3[2]<<"x^3 + "<<poli1[1]*poli3[1]<<"x^2 + "
+ <<poli1[0]*poli3[0]<<"x^1 " ;
+
+  cout<<"\n\n Turunan : \n";
+  cout<<"   P2'    = " <<poli2[8]*8<<"x^7 + "
+                       <<poli2[7]*7<<"x^6 + "<<poli2[6]*6<<"x^5 + "
+                       <<poli2[5]*5<<"x^4 + "<<poli2[4]*4<<"x^3 + "
+                       <<poli2[3]*3<<"x^2 + "<<poli2[2]*2<<"x^1 +\n"
+                       <<poli2[1]*1<<"x^0 + "<<poli2[0] *0<<"";
+}
